@@ -61,7 +61,7 @@ public class UserDAO {
         try {
             String sql = "select name, role\n"
                     + "from [User]\n"
-                    + "where email = ? and password = ? and status = 'active'";
+                    + "where email = ? and password = ? and status = 'active' and role = 'user'";
             con = ConnectDB.makeConnnection();
             pst = con.prepareStatement(sql);
             pst.setString(1, email);
